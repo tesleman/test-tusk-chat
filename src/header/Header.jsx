@@ -61,7 +61,7 @@ const Header = React.memo(function  Header({onChangeSidebar, user, logoutThunk }
                 direction="row"
                 justify="flex-end"
                 alignItems="flex-end"
-            > <Button  className={classes.loginButton} onClick={() => logOut()} color="inherit">Logout</Button></Grid> }
+            > <Link className={classes.loginButton} to={"/login"}><Button  className={classes.loginButton} onClick={() => logOut()} color="inherit">Logout</Button></Link></Grid> }
         </Toolbar>
       </AppBar>
     </>

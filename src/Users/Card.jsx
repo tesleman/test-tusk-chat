@@ -87,10 +87,10 @@ let CastomCard = (props) => {
                                            title={props.name}>
 
                                     {props.bookmark ? (props.bookmark.some((i) => i === props.user.id) ?
-                                        <Badge style={{cursor: "pointer"}} onClick={() => bookmark(false)}
+                                        <Badge className={classes.hearthDark} style={{cursor: "pointer"}} onClick={() => bookmark(false)}
                                                badgeContent={props.bookmark.length} color="primary">
                                             <Bookmark/>
-                                        </Badge> : <Badge style={{cursor: "pointer"}} onClick={() => bookmark(true)}
+                                        </Badge> : <Badge className={classes.hearthDark} style={{cursor: "pointer"}} onClick={() => bookmark(true)}
                                                           badgeContent={props.bookmark.length}
                                                           color="primary"><BookmarkBorder/>
                                         </Badge>) : ""}
