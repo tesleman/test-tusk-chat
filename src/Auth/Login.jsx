@@ -28,7 +28,7 @@ let Login = (props) => {
     }, [props.error])
 
     return (
-        props.user.id ? <Redirect to="/"/> : <form onSubmit={(event => {
+        props.user.id ? <Redirect to="/message"/> : <form onSubmit={(event => {
             event.preventDefault()
             sub(login, password)
         })} style={{marginTop: 20}}>

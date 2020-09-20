@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import CastomCard from "./Card";
 import {connect} from "react-redux";
 import {bookmarkAddDellThunk, myBookmarkThunck} from "../store/reducers/bookmark";
+import {Redirect} from "react-router";
 
 
 function MyBookmark(props) {
@@ -11,9 +12,9 @@ function MyBookmark(props) {
     React.useEffect(()=>{
         props.myBookmarkThunck(props.currentuser.id)
     },[props.users.length])
-    console.log(props)
-    return(
 
+    return(
+        !props.currentuser.id ? <Redirect to="/login"/> :
             <Grid container item xs={5}>
 
                 {props.users && props.users.map(item => <CastomCard

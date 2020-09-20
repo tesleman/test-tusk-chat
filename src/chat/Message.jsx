@@ -44,7 +44,7 @@ function Messages({sendMessageThunck, messagesThunck, data, user, getCurrentUser
         getCurrentUserThunk();
     }, []);
     return (
-        !user.id ? <Redirect to="/"/> :
+        !user.id ? <Redirect to="/login"/> :
         <Grid item sm={3}>
             <Grid
                 container
